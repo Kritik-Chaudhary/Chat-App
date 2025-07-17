@@ -1,0 +1,12 @@
+[phases.build]
+cmds = [
+  "npm ci",
+  "npm run build",
+  "cp -r drizzle dist/ 2>/dev/null || echo 'No drizzle directory found'"
+]
+
+[phases.start]
+cmd = "npm run start"
+
+[variables]
+NODE_ENV = "production"
